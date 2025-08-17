@@ -59,7 +59,7 @@ const ja = {
           ],
           highlight: 'ユーザー参加と定着率を向上。',
           location: 'メキシコ、ヌエボ・レオン',
-          website: 'https://likephone.mx/',
+          website: 'https://likephone.mx',
         },
         {
           company: 'EDUCONTROL – Centro Bachillerato Tecnológico Agropecuario No.5',

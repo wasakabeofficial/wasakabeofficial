@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { cbta5_logo, gob, likephone_logo, uthh } from '../../../constants/assets'
 import '../../../styles/Experiences.css'
 
@@ -9,67 +10,15 @@ type Experience = {
   highlight?: string
   logo?: string
   location?: string
-  website?: string | null // null si no tiene web
+  website?: string | null
 }
 
-const EXPERIENCES: Experience[] = [
-  {
-    company: 'XTI - Like Capital',
-    role: 'Mobile Developer',
-    period: 'Jan 2025 – Apr 2025',
-    description: [
-      'App exclusiva para miembros de partidos políticos.',
-      'Módulo interno tipo red social y “Reporte Ciudadano”.',
-      'Sistema de noticias, servicios y promociones exclusivas.',
-    ],
-    highlight: 'Impulso de participación y retención de usuarios.',
-    logo: likephone_logo,
-    location: 'Nuevo León, México',
-    website: 'https://likephone.mx/',
-  },
-  {
-    company: 'EDUCONTROL – Centro Bachillerato Tecnológico Agropecuario No.5',
-    role: 'Software Engineer',
-    period: 'Sep 2023 – Dec 2024',
-    description: [
-      'Plataforma web institucional y credenciales automatizadas.',
-      'App para padres con integración a Alexa.',
-      'Optimización de control de acceso y comunicación escolar.',
-    ],
-    highlight: 'Automatización operativa y mejor comunicación con padres.',
-    logo: cbta5_logo,
-    location: 'Hidalgo, México',
-    website: null,
-  },
-  {
-    company: 'Gobierno de Hidalgo – IFRESH',
-    role: 'Software Engineer',
-    period: 'Feb 2024 – Apr 2024',
-    description: [
-      'Migración y optimización de datos estatales.',
-      'Mejor consistencia de información y procesos de carga.',
-      'Herramientas para detección/corrección de errores.',
-    ],
-    highlight: 'Datos más confiables y procesos más rápidos.',
-    logo: gob,
-    location: 'Hidalgo, México',
-    website: 'https://hidalgo.gob.mx',
-  },
-  {
-    company: 'The Cooking Meat - Universidad Tecnológica de la Huasteca Hidalguense',
-    role: 'Software Engineer',
-    period: 'Feb 2024 – Apr 2024',
-    description: [
-      'App exclusivo para el área de carnes.',
-      'Detección de diferentes tipos de cocción de la carne con CNN.',
-      'Herramientas para detección/corrección de probabilidad.',
-    ],
-    highlight: 'Datos más confiables y procesos más rápidos.',
-    logo: uthh,
-    location: 'Huejutla, Hidalgo, México',
-    website: 'https://uthh.edu.mx',
-  },
-]
+const logoByCompany: Record<string, string> = {
+  'XTI - Like Capital': likephone_logo,
+  'Gobierno de Hidalgo – IFRESH': gob,
+  'EDUCONTROL – Centro Bachillerato Tecnológico Agropecuario No.5': cbta5_logo,
+  'The Cooking Meat - Universidad Tecnológica de la Huasteca Hidalguense': uthh,
+}
 
 const initialsOf = (name: string) =>
   name
@@ -80,19 +29,50 @@ const initialsOf = (name: string) =>
     .join('')
 
 export default function Experiences() {
+  const { t } = useTranslation()
+
+  // Lee el array completo desde i18n
+  const itemsUnknown = t('experiences_section.items', {
+    returnObjects: true,
+    defaultValue: [],
+  }) as unknown
+
+  // Asegura que sea un array y normaliza campos
+  const EXPERIENCES: Experience[] = Array.isArray(itemsUnknown)
+    ? (itemsUnknown as unknown[]).map((it) => {
+        const obj = typeof it === 'object' && it !== null ? (it as Record<string, unknown>) : {}
+        const company = String(obj.company ?? '')
+        return {
+          company,
+          role: String(obj.role ?? ''),
+          period: String(obj.period ?? ''),
+          description: Array.isArray(obj.description) ? obj.description.map(String) : [],
+          highlight: obj.highlight ? String(obj.highlight) : undefined,
+          location: obj.location ? String(obj.location) : undefined,
+          website: obj.website === null ? null : obj.website ? String(obj.website) : null,
+          // logo opcional en i18n; si no está, lo resolvemos por nombre
+          logo: obj.logo ?? logoByCompany[company],
+        } as Experience
+      })
+    : []
+
+  const title = t('experiences_section.title', 'Trayectoria')
+  const subtitle =
+    t('experiences_section.subtitle') ||
+    'Resumen de experiencias clave en desarrollo y gestión de software. La información sensible se mantiene reservada por razones de confidencialidad.'
+  const detailsLabel = t('experiences_section.details', 'Ver detalles')
+  const noWebsite = t('experiences_section.noWebsite', 'Sitio web no disponible')
+
   return (
     <section id="path" className="exp">
       <header className="exp__header">
-        <h2 className="exp__title">Trayectoria</h2>
-        <p className="exp__subtitle">
-          Resumen de experiencias clave en desarrollo y gestión de software. La información sensible
-          se mantiene reservada por razones de confidencialidad.
-        </p>
+        <h2 className="exp__title">{title}</h2>
+        <p className="exp__subtitle">{subtitle}</p>
       </header>
 
       <ol className="exp__timeline" role="list">
         {EXPERIENCES.map((exp, i) => (
-          <li key={i} className="exp__item">
+          <li key={`${exp.company}-${exp.period}-${i}`} className="exp__item">
             <span className="exp__line" aria-hidden="true" />
             <span className="exp__node" aria-hidden="true">
               <span className="exp__badge">{initialsOf(exp.company)}</span>
@@ -120,11 +100,11 @@ export default function Experiences() {
                 {exp.website ? (
                   <p className="exp__website">
                     <a href={exp.website} target="_blank" rel="noopener noreferrer">
-                      {exp.website.replace(/^https?:\/\//, '')}
+                      {String(exp.website).replace(/^https?:\/\//, '')}
                     </a>
                   </p>
                 ) : (
-                  <p className="exp__website exp__website--na">Sitio web no disponible</p>
+                  <p className="exp__website exp__website--na">{noWebsite}</p>
                 )}
 
                 {exp.highlight && <p className="exp__highlight">{exp.highlight}</p>}
@@ -132,7 +112,7 @@ export default function Experiences() {
 
               <details className="exp__details">
                 <summary className="exp__summary">
-                  Ver detalles
+                  {detailsLabel}
                   <svg
                     width="16"
                     height="16"

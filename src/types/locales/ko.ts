@@ -59,7 +59,7 @@ const ko = {
           ],
           highlight: '사용자 참여 및 유지율 향상.',
           location: '멕시코 누에보레온',
-          website: 'https://likephone.mx/',
+          website: 'https://likephone.mx',
         },
         {
           company: 'EDUCONTROL – Centro Bachillerato Tecnológico Agropecuario No.5',

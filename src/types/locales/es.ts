@@ -58,7 +58,7 @@ const es = {
           ],
           highlight: 'Impulso de participación y retención de usuarios.',
           location: 'Nuevo León, México',
-          website: 'https://likephone.mx/',
+          website: 'https://likephone.mx',
         },
         {
           company: 'EDUCONTROL – Centro Bachillerato Tecnológico Agropecuario No.5',

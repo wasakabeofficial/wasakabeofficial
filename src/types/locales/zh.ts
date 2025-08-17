@@ -56,7 +56,7 @@ const zh = {
           ],
           highlight: '提升了用户参与度和留存率。',
           location: '墨西哥 新莱昂州',
-          website: 'https://likephone.mx/',
+          website: 'https://likephone.mx',
         },
         {
           company: 'EDUCONTROL – Centro Bachillerato Tecnológico Agropecuario No.5',
