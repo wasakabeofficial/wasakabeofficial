@@ -40,7 +40,10 @@ const Navbar = () => {
         </ul>
 
         <div className="navbar-right">
-          <LanguageIcon className="size-10 text-blue-500" onClick={toggleLanguageMenu} />
+          <LanguageIcon
+            className="size-10 cursor-pointer text-blue-500"
+            onClick={toggleLanguageMenu}
+          />
           {showLangMenu && (
             <ul className="language-dropdown">
               <li onClick={() => changeLanguage('en')}>English</li>

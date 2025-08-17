@@ -24,6 +24,20 @@ const zh = {
     about_vision_title: '愿景',
     about_vision_text:
       '成为拉丁美洲高科技数字化转型的领导者，让软件、人工智能与商业融合，带来真正的变革。',
+
+    services_section: {
+      title: '服务',
+      description1: 'WasakaBe 提供前沿的数字解决方案，融合智能自动化、现代软件工程和战略思维。',
+      description2:
+        '每项服务旨在帮助企业、教育机构和政府机构优化运营、改善用户体验，并通过智能技术实现规模化。',
+      items: {
+        ai: '人工智能自动化',
+        mobile: '移动应用',
+        web: '网页平台',
+        cloud: '智能集成',
+        strategy: '数字战略',
+      },
+    },
   },
 }
 

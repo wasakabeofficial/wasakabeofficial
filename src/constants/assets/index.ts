@@ -8,4 +8,15 @@ import icon_app from '../../assets/images/icon_app.png'
 import icon_web from '../../assets/images/icon_web.png'
 import icon_nube from '../../assets/images/icon_nube.png'
 import icon_digital from '../../assets/images/icon_digital.png'
-export { wb_logo, wallpapers, braw_wallpapers, robot, robot_dos, icon_ai, icon_app, icon_web,icon_nube,icon_digital }
+export {
+  wb_logo,
+  wallpapers,
+  braw_wallpapers,
+  robot,
+  robot_dos,
+  icon_ai,
+  icon_app,
+  icon_web,
+  icon_nube,
+  icon_digital,
+}

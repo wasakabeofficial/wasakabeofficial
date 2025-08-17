@@ -26,6 +26,20 @@ const en = {
     about_vision_title: 'Vision',
     about_vision_text:
       'To become a leading reference in Latin America for high-tech digital transformation, where software, artificial intelligence, and business converge to generate real change.',
+    services_section: {
+      title: 'Services',
+      description1:
+        'WasakaBe delivers cutting-edge digital solutions that combine intelligent automation, modern software engineering, and strategic thinking.',
+      description2:
+        'Each service is designed to help businesses, educational institutions, and government entities optimize their operations, improve user experiences, and scale through smart technology.',
+      items: {
+        ai: 'Automation with AI',
+        mobile: 'Mobile Applications',
+        web: 'Web Platforms',
+        cloud: 'Smart Integrations',
+        strategy: 'Digital Strategy',
+      },
+    },
   },
 }
 

@@ -26,6 +26,20 @@ const es = {
     about_vision_title: 'Visión',
     about_vision_text:
       'Convertirnos en un referente líder en América Latina en transformación digital de alta tecnología, donde el software, la inteligencia artificial y los negocios convergen para generar un cambio real.',
+    services_section: {
+      title: 'Servicios',
+      description1:
+        'WasakaBe ofrece soluciones digitales de vanguardia que combinan automatización inteligente, ingeniería de software moderna y pensamiento estratégico.',
+      description2:
+        'Cada servicio está diseñado para ayudar a empresas, instituciones educativas y entidades gubernamentales a optimizar sus operaciones, mejorar la experiencia de usuario y escalar con tecnología inteligente.',
+      items: {
+        ai: 'Automatización con IA',
+        mobile: 'Aplicaciones móviles',
+        web: 'Plataformas web',
+        cloud: 'Integraciones inteligentes',
+        strategy: 'Estrategia digital',
+      },
+    },
   },
 }
 

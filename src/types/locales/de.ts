@@ -26,6 +26,20 @@ const de = {
     about_vision_title: 'Vision',
     about_vision_text:
       'Eine führende Referenz in Lateinamerika für digitale Hochtechnologie-Transformation zu werden, bei der Software, künstliche Intelligenz und Geschäft zusammenkommen, um echten Wandel zu schaffen.',
+    services_section: {
+      title: 'Dienstleistungen',
+      description1:
+        'WasakaBe bietet hochmoderne digitale Lösungen, die intelligente Automatisierung, moderne Softwaretechnik und strategisches Denken kombinieren.',
+      description2:
+        'Jeder Service ist darauf ausgelegt, Unternehmen, Bildungseinrichtungen und Regierungsstellen dabei zu helfen, ihre Abläufe zu optimieren, Benutzererfahrungen zu verbessern und durch intelligente Technologie zu skalieren.',
+      items: {
+        ai: 'Automatisierung mit KI',
+        mobile: 'Mobile Anwendungen',
+        web: 'Webplattformen',
+        cloud: 'Intelligente Integrationen',
+        strategy: 'Digitale Strategie',
+      },
+    },
   },
 }
 
