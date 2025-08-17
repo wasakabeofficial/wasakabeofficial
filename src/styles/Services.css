@@ -1,0 +1,74 @@
+.services-container {
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.services-container h1 {
+  color: #51aee5;
+  font-size: 5.5em;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.services-container h1 span {
+  color: #d6d6d6;
+  font-weight: 400;
+}
+.services-texts {
+  width: 100%;
+  max-width: 950px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+.services-texts p {
+  font-size: 1.8rem;
+  color: #d6d6d6;
+}
+
+.services-card {
+    display: flex;
+    gap: 20px;
+}
+.services-card .card{
+    background-color: rgba(23, 42, 49, 0.92);
+    border: 2px rgba(186, 184, 184, 0.524) solid;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: whitesmoke;
+    font-size: 2rem;
+    font-weight: 100;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.services-card .card .services-card-icon{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;          /* importante para recortar el zoom */
+  border-radius: inherit;    /* opcional si tu card tiene bordes redondos */
+}
+
+.services-card .card .services-card-icon img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(10%);
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform .35s ease, filter .3s ease-in-out;
+  will-change: transform, filter; /* perf */
+  cursor: pointer;               
+}
+.services-card .card .services-card-icon img:hover{
+  filter: contrast(50%);
+  transform: scale(1.06);    /* ajusta: 1.04–1.1 */
+}
+
