@@ -44,7 +44,7 @@ Actualmente es una **marca personal** que busca crecer hasta consolidarse como u
 
 ## 🌍 Demo
 
-👉 [Visitar sitio web](https://wasakabe.com) _(enlaza cuando lo publiques)_
+👉 [Visitar sitio web](https://wasakabe.vercel.app/) _(enlaza cuando lo publiques)_
 
 ---
 
