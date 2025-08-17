@@ -170,3 +170,118 @@
 .wk-strong {
   font-weight: 600;
 }
+
+/* ====== RESPONSIVO (overrides) ====== */
+
+/* Contenedor: grid fluido con auto-fit */
+.wk-footer__inner {
+  padding: clamp(20px, 3.5vw, 40px) clamp(12px, 3vw, 28px);
+  display: grid;
+  gap: clamp(20px, 3vw, 48px);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* 1–4 cols según ancho */
+}
+
+/* En tablets anchas y desktop puedes forzar 3–4 columnas si prefieres */
+@media (min-width: 1024px) {
+  .wk-footer__inner {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Alineaciones por breakpoint */
+.wk-footer__col--right {
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .wk-footer__col--right {
+    text-align: right;
+  }
+}
+
+/* Títulos y tipografías fluidas */
+.wk-footer__title {
+  font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+}
+.wk-footer__address,
+.wk-footer__list,
+.wk-footer__lead,
+.wk-footer__desc,
+.wk-footer__note {
+  font-size: clamp(0.95rem, 1.6vw, 1.125rem);
+  line-height: 1.7;
+}
+
+/* Subrayado: centrado en móvil, a la derecha en desktop (si aplica) */
+.wk-footer__underline {
+  width: clamp(6rem, 20vw, 10rem);
+}
+.wk-footer__underline--right {
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  .wk-footer__underline--right {
+    margin-left: auto;
+  }
+}
+
+/* Social: que no se rompa y se centre en móvil */
+.wk-social {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(10px, 2vw, 16px);
+}
+@media (min-width: 768px) {
+  .wk-social {
+    justify-content: flex-end;
+  }
+}
+.wk-social__btn {
+  width: clamp(40px, 5vw, 48px);
+  height: clamp(40px, 5vw, 48px);
+  border-radius: 14px;
+}
+.wk-social__svg {
+  width: clamp(22px, 3vw, 28px);
+  height: clamp(22px, 3vw, 28px);
+}
+
+/* Lista de avisos: sin bleed y con touch targets cómodos */
+.wk-footer__list {
+  margin-top: 1rem;
+  padding-left: 1.25rem;
+}
+.wk-footer__list li + li {
+  margin-top: 0.35rem;
+}
+.wk-link {
+  padding: 2px 0; /* mejor área de click */
+}
+.wk-link:focus-visible,
+.wk-social__btn:focus-visible {
+  outline: 2px solid var(--wk-accent);
+  outline-offset: 2px;
+  border-radius: 14px;
+}
+
+/* Columna final (desc + nota): que pueda ocupar ancho completo en móvil */
+@media (max-width: 480px) {
+  .wk-footer__desc,
+  .wk-footer__note {
+    text-wrap: pretty;
+  }
+}
+
+/* Barra inferior: padding y tamaño fluido */
+.wk-footer__bottom {
+  padding: clamp(12px, 2.5vw, 18px) clamp(16px, 4vw, 24px);
+  font-size: clamp(0.9rem, 1.6vw, 1rem);
+  text-align: center;
+}
+
+/* Respeto a usuarios con menos motion */
+@media (prefers-reduced-motion: reduce) {
+  .wk-link,
+  .wk-social__btn {
+    transition: none;
+  }
+}

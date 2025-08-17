@@ -1,74 +1,221 @@
+/* Layout base */
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.8rem 2rem;
-  top: 0;
+  padding: 1.2rem 2rem;
+  background: #0f0f17;
+  border-bottom: 1px solid #222236;
 }
-.navbar-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
+
 .navbar-left,
 .navbar-right {
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 
+.navbar-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Logo & iconos */
 .navbar-logo {
   height: 55px;
   width: auto;
 }
 
 .navbar-icon {
-  height: 45px;
-  width: auto;
+  height: 28px;
+  width: 28px;
+  color: white;
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
   cursor: pointer;
+  padding: 6px;
+  line-height: 0;
+  border-radius: 8px;
 }
 
-.language-dropdown {
-  position: absolute;
-  top: 5rem;
-  right: 0;
-  margin-top: 1rem;
-  background-color: #1e1e2f;
-  border: 1px solid #3a3a4d;
-  border-radius: 5px;
-  list-style: none;
-  padding: 0.5rem 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  z-index: 1001;
+.icon-btn:hover {
+  background: #1c1c2b;
 }
 
-.language-dropdown li {
-  padding: 0.6rem 1.5rem;
-  cursor: pointer;
-  color: #f0f0f0;
-  transition: background 0.2s ease;
-  white-space: nowrap;
-}
-
-.language-dropdown li:hover {
-  background-color: #2b2b3f;
-  color: #00c8ff;
-}
-
+/* Links desktop */
 .navbar-links {
   list-style: none;
   display: flex;
-  gap: 2.5rem;
-  font-size: 1.6rem;
-  font-weight: bold;
+  gap: 2.2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-links li a {
   text-decoration: none;
   color: #f5f5f5;
-  transition: color 0.3s ease;
+  transition: color 0.25s ease;
 }
 
 .navbar-links li a:hover {
-  color: #737386;
+  color: #9aa0ff;
+}
+
+/* Dropdown idiomas (desktop) */
+.language-dropdown {
+  position: absolute;
+  top: 64px;
+  right: 16px;
+  margin-top: 0.5rem;
+  background-color: #161626;
+  border: 1px solid #2c2c42;
+  border-radius: 10px;
+  list-style: none;
+  padding: 0.5rem 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  z-index: 1100;
+  min-width: 160px;
+}
+
+.language-dropdown li {
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  color: #ececf3;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+  white-space: nowrap;
+  font-size: 0.95rem;
+}
+
+.language-dropdown li:hover {
+  background-color: #24243a;
+  color: #63d1ff;
+}
+
+/* --------- Menú móvil / tablet --------- */
+.hamburger {
+  display: none; /* visible en breakpoints pequeños */
+}
+
+.mobile-menu {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 64px; /* justo debajo del navbar */
+  background: rgba(13, 13, 22, 0.96);
+  backdrop-filter: blur(6px);
+  border-top: 1px solid #222236;
+  transform: translateY(-12px);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+  z-index: 1050;
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.mobile-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin: 0;
+  padding: 0.6rem 1.2rem;
+}
+
+.mobile-links li a {
+  display: block;
+  padding: 1rem 0.6rem;
+  text-decoration: none;
+  color: #f5f5f5;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+.mobile-links li a:hover {
+  background: #1a1a2b;
+  color: #9aa0ff;
+}
+
+/* Lenguajes dentro del drawer móvil */
+.mobile-langs {
+  border-top: 1px solid #222236;
+  padding: 0.9rem 1.2rem 1.2rem;
+}
+
+.mobile-langs__title {
+  margin: 0.2rem 0 0.6rem;
+  color: #cfcfe6;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.mobile-langs__grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.mobile-langs__grid button {
+  background: #1a1a2b;
+  border: 1px solid #292949;
+  border-radius: 8px;
+  color: #e6e6f2;
+  padding: 0.5rem 0.25rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mobile-langs__grid button:hover {
+  background: #24243a;
+}
+
+/* --------- Breakpoints --------- */
+@media (max-width: 1024px) {
+  /* Oculta links de escritorio, muestra hamburguesa */
+  .navbar-center {
+    display: none;
+  }
+
+  .hamburger {
+    display: inline-flex;
+  }
+
+  /* Ajustes de tamaños para mejor toque */
+  .navbar {
+    padding: 0.9rem 1rem;
+  }
+
+  .navbar-logo {
+    height: 48px;
+  }
+
+  .navbar-icon {
+    height: 26px;
+    width: 26px;
+  }
+}
+
+/* Un poco más compacto en teléfonos */
+@media (max-width: 640px) {
+  .mobile-langs__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
