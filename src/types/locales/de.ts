@@ -110,7 +110,7 @@ const de = {
       notices_terms: 'Allgemeine Geschäftsbedingungen',
       socials_title: 'Soziale Netzwerke',
       socials_lead: 'Folge mir und bleib in Kontakt über',
-      desc: 'Folge mir für Einblicke in <1>Entwicklung</1>, <1>KI</1>, Automatisierung und digitale Strategie.',
+      desc: 'Folge mir für Einblicke in Entwicklung, KI, Automatisierung und digitale Strategie.',
       note: 'Bleiben wir in Verbindung — werde Teil der WasakaBe-Welt.',
       copyright: 'Alle Rechte vorbehalten.',
     },
