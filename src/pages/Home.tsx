@@ -1,4 +1,4 @@
-import { About, Header, Navbar, Services } from '../constants/components'
+import { About, Experiences, Header, Navbar, Services } from '../constants/components'
 
 export default function Home() {
   return (
@@ -7,6 +7,7 @@ export default function Home() {
       <Header />
       <About />
       <Services />
+      <Experiences />
     </div>
   )
 }

@@ -2,7 +2,7 @@ const ja = {
   translation: {
     about: '私について',
     services: 'サービス',
-    experience: '経験',
+    experience: 'パス',
     contact: '連絡先',
 
     header_title: '未来に向けた<1>知性、戦略、ビジョン</1>を適用した技術。',
@@ -39,6 +39,68 @@ const ja = {
         cloud: 'スマートインテグレーション',
         strategy: 'デジタル戦略',
       },
+    },
+
+    experiences_section: {
+      title: '経歴',
+      subtitle:
+        'ソフトウェア開発とマネジメントにおける主要な経験の概要。機密情報は守秘のため非公開となっています。',
+      details: '詳細を見る',
+      noWebsite: 'ウェブサイトは利用できません',
+      items: [
+        {
+          company: 'XTI - Like Capital',
+          role: 'モバイル開発者',
+          period: '2025年1月 – 2025年4月',
+          description: [
+            '政党メンバー専用アプリ。',
+            '内部SNS型モジュールと「市民レポート」。',
+            'ニュース、サービス、限定プロモーションのシステム。',
+          ],
+          highlight: 'ユーザー参加と定着率を向上。',
+          location: 'メキシコ、ヌエボ・レオン',
+          website: 'https://likephone.mx/',
+        },
+        {
+          company: 'EDUCONTROL – Centro Bachillerato Tecnológico Agropecuario No.5',
+          role: 'ソフトウェアエンジニア',
+          period: '2023年9月 – 2024年12月',
+          description: [
+            '学校向けウェブプラットフォームと自動化された学生証。',
+            'Alexa 連携の保護者向けアプリ。',
+            '入退室管理と学校内コミュニケーションの最適化。',
+          ],
+          highlight: '運営の自動化と保護者とのより良いコミュニケーション。',
+          location: 'メキシコ、イダルゴ',
+          website: null,
+        },
+        {
+          company: 'イダルゴ州政府 – IFRESH',
+          role: 'ソフトウェアエンジニア',
+          period: '2024年2月 – 2024年4月',
+          description: [
+            '州データの移行と最適化。',
+            '情報の一貫性とロードプロセスの改善。',
+            'エラー検出・修正ツール。',
+          ],
+          highlight: 'より信頼性の高いデータと迅速なプロセス。',
+          location: 'メキシコ、イダルゴ',
+          website: 'https://hidalgo.gob.mx',
+        },
+        {
+          company: 'The Cooking Meat - Universidad Tecnológica de la Huasteca Hidalguense',
+          role: 'ソフトウェアエンジニア',
+          period: '2024年2月 – 2024年4月',
+          description: [
+            '食肉分野専用アプリ。',
+            'CNN を用いた肉の焼き加減の検出。',
+            '確率検出・修正ツール。',
+          ],
+          highlight: 'より信頼性の高いデータと迅速なプロセス。',
+          location: 'メキシコ、イダルゴ州フエフトラ',
+          website: 'https://uthh.edu.mx',
+        },
+      ],
     },
   },
 }

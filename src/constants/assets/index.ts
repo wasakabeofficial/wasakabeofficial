@@ -1,4 +1,9 @@
 import wb_logo from '../../assets/icons/wb.png'
+import likephone_logo from '../../assets/icons/likephone.png'
+import cbta5_logo from '../../assets/icons/cbta5.png'
+import gob from '../../assets/icons/gob.png'
+import uthh from '../../assets/icons/uthh.png'
+
 import wallpapers from '../../assets/images/wallpapers.jpg'
 import braw_wallpapers from '../../assets/images/braw_wallpaper.jpg'
 import robot from '../../assets/images/robot_uniforme.jpg'
@@ -19,4 +24,8 @@ export {
   icon_web,
   icon_nube,
   icon_digital,
+  likephone_logo,
+  cbta5_logo,
+  gob,
+  uthh,
 }

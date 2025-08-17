@@ -1,0 +1,260 @@
+/* ====== Variables y reset suave ====== */
+:root {
+  --exp-bg: #0b0f1a;
+  --card-bg: rgba(255, 255, 255, 0.06);
+  --card-bg-hover: rgba(255, 255, 255, 0.1);
+  --border: rgba(255, 255, 255, 0.12);
+  --text: #e8ecf1;
+  --muted: #a8b1c1;
+  --accent: #7c5cff; /* morado-neón */
+  --accent-2: #00d1ff; /* cian */
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.exp {
+  padding: clamp(24px, 4vw, 56px);
+  color: var(--text);
+  align-items: center;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+}
+.exp__location {
+  font-size: 1.2rem;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.exp__website {
+  font-size: 2.5rem;
+  margin-top: 2px;
+}
+.exp__website a {
+  color: var(--accent-2);
+  text-decoration: none;
+}
+.exp__website a:hover {
+  text-decoration: underline;
+}
+
+.exp__website--na {
+  color: #888;
+  font-style: italic;
+}
+
+/* ====== Header ====== */
+.exp__header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+.exp__title {
+  font-size: clamp(6.6rem, 5.2vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+.exp__subtitle {
+  color: var(--muted);
+  margin-top: 6px;
+  font-size: 2.3rem;
+}
+
+/* ====== Timeline ====== */
+.exp__timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  list-style: none;
+  padding-left: 0;
+}
+.exp__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 22px;
+}
+
+/* Línea vertical */
+.exp__line {
+  position: absolute;
+  left: 19px;
+  top: 0;
+  bottom: -8px;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(124, 92, 255, 0.4), rgba(0, 209, 255, 0.4));
+  z-index: 0;
+}
+
+/* Nodo */
+.exp__node {
+  position: relative;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  margin-top: 2px;
+  display: grid;
+  place-items: center;
+}
+.exp__badge {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(124, 92, 255, 0.9), rgba(0, 209, 255, 0.9));
+  color: white;
+  font-weight: 800;
+  box-shadow: var(--shadow);
+  letter-spacing: 0.5px;
+}
+
+/* Card */
+.exp__card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 16px 16px 10px 16px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+
+  width: '100%';
+  max-width: 820px;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  gap: 20px;
+}
+.exp__card:hover {
+  transform: translateY(-2px);
+  background: var(--card-bg-hover);
+  border-color: rgba(124, 92, 255, 0.35);
+}
+
+/* Encabezado dentro de la card */
+.exp__cardHeader {
+  margin-bottom: 6px;
+}
+.exp__top {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.exp__role {
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1.3;
+}
+.exp__period {
+  font-size: 1.2rem;
+  color: var(--accent-2);
+  background: rgba(0, 209, 255, 0.12);
+  border: 1px solid rgba(0, 209, 255, 0.28);
+  padding: 4px 20px;
+  border-radius: 999px;
+}
+.exp__company {
+  color: var(--muted);
+  margin-top: 4px;
+  font-size: 1.8rem;
+  width: 320px;
+}
+.exp__highlight {
+  margin-top: 8px;
+
+  color: #dfe6ff;
+  font-size: 1.2rem;
+}
+
+/* Details */
+.exp__details {
+  margin-top: 10px;
+}
+.exp__summary {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 8px 12px;
+  border-radius: 10px;
+  user-select: none;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  transition:
+    border-color 0.25s ease,
+    transform 0.2s ease;
+}
+.exp__summary:hover {
+  border-color: rgba(124, 92, 255, 0.35);
+  transform: translateY(-1px);
+}
+.exp__chev {
+  transition: transform 0.25s ease;
+}
+.exp__details[open] .exp__chev {
+  transform: rotate(180deg);
+}
+
+/* Lista de bullets */
+.exp__desc {
+  margin: 12px 0 6px 18px;
+  display: grid;
+  gap: 6px;
+}
+.exp__desc li {
+  color: #eef3ff;
+  line-height: 1.5;
+  position: relative;
+}
+
+.exp__logoWrapper {
+  margin-top: 8px;
+  display: flex;
+  justify-content: flex-start;
+  width: 220px;
+}
+
+.exp__logo {
+  height: '100%';
+  width: 220px;
+  object-fit: fill;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+  transition: transform 0.25s ease;
+}
+
+.exp__logo:hover {
+  transform: scale(1.05);
+}
+
+/* ====== Responsive ====== */
+@media (min-width: 880px) {
+  .exp__item {
+    grid-template-columns: 56px 1fr;
+  }
+  .exp__line {
+    left: 27px;
+  }
+  .exp__node {
+    width: 56px;
+    height: 56px;
+  }
+  .exp__badge {
+    width: 48px;
+    height: 48px;
+    font-size: 0.9rem;
+  }
+  .exp__card {
+    padding: 18px 18px 12px 18px;
+  }
+  .exp__role {
+    font-size: 1.15rem;
+  }
+}
