@@ -101,6 +101,19 @@ const en = {
         },
       ],
     },
+
+    footer: {
+      location_title: 'Location',
+      location_text: 'Monterrey, Nuevo León, Mexico.',
+      notices_title: 'Notices',
+      notices_confidentiality: 'Confidentiality Notice',
+      notices_terms: 'Terms and Conditions',
+      socials_title: 'Social Media',
+      socials_lead: 'Follow me and stay connected through',
+      desc: 'Follow me for insights on <1>development</1>, <1>AI</1>, automation, and digital strategy.',
+      note: 'Let’s stay connected — be part of the WasakaBe world.',
+      copyright: 'All rights reserved.',
+    },
   },
 }
 

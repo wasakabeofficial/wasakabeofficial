@@ -102,6 +102,19 @@ const ja = {
         },
       ],
     },
+
+    footer: {
+      location_title: '所在地',
+      location_text: 'メキシコ、ヌエボ・レオン州モンテレイ',
+      notices_title: '通知',
+      notices_confidentiality: '機密保持に関する通知',
+      notices_terms: '利用規約',
+      socials_title: 'ソーシャルメディア',
+      socials_lead: 'フォローして以下からつながりましょう',
+      desc: '<1>開発</1>、<1>AI</1>、自動化、デジタル戦略に関する最新情報をフォローしてください。',
+      note: 'つながりを保ちましょう — WasakaBe の世界の一員になりましょう。',
+      copyright: '全著作権所有。',
+    },
   },
 }
 

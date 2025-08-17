@@ -101,6 +101,18 @@ const es = {
         },
       ],
     },
+    footer: {
+      location_title: 'Ubicación',
+      location_text: 'Monterrey, Nuevo León, México.',
+      notices_title: 'Avisos',
+      notices_confidentiality: 'Aviso de confidencialidad',
+      notices_terms: 'Términos y Condiciones',
+      socials_title: 'Redes Sociales',
+      socials_lead: 'Sígueme y mantente en contacto a través de',
+      desc: 'Sígueme para conocer más sobre <1>desarrollo</1>, <1>IA</1>, automatización y estrategia digital.',
+      note: 'Mantengamos el contacto — sé parte del mundo WasakaBe.',
+      copyright: 'Todos los derechos reservados.',
+    },
   },
 }
 

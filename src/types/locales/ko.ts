@@ -102,6 +102,19 @@ const ko = {
         },
       ],
     },
+
+    footer: {
+      location_title: '위치',
+      location_text: '멕시코 누에보레온주 몬테레이',
+      notices_title: '공지사항',
+      notices_confidentiality: '기밀 유지 공지',
+      notices_terms: '이용 약관',
+      socials_title: '소셜 미디어',
+      socials_lead: '팔로우하고 아래를 통해 연결하세요',
+      desc: '<1>개발</1>, <1>AI</1>, 자동화 및 디지털 전략에 대한 인사이트를 확인하세요.',
+      note: '계속 연결되어 WasakaBe 세계의 일부가 되세요.',
+      copyright: '모든 권리 보유.',
+    },
   },
 }
 

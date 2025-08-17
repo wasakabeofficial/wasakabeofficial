@@ -99,6 +99,19 @@ const zh = {
         },
       ],
     },
+
+    footer: {
+      location_title: '位置',
+      location_text: '墨西哥 新莱昂州 蒙特雷',
+      notices_title: '通知',
+      notices_confidentiality: '保密声明',
+      notices_terms: '条款和条件',
+      socials_title: '社交媒体',
+      socials_lead: '关注我并通过以下方式保持联系',
+      desc: '关注我以获取 <1>开发</1>、<1>人工智能</1>、自动化和数字战略的见解。',
+      note: '让我们保持联系 —— 成为 WasakaBe 世界的一部分。',
+      copyright: '版权所有。',
+    },
   },
 }
 
