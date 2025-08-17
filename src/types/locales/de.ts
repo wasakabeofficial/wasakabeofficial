@@ -2,7 +2,7 @@ const de = {
   translation: {
     about: 'Über mich',
     services: 'Dienstleistungen',
-    experience: 'Erfahrung',
+    experience: 'Weg',
     contact: 'Kontakt',
 
     header_title:
@@ -26,6 +26,94 @@ const de = {
     about_vision_title: 'Vision',
     about_vision_text:
       'Eine führende Referenz in Lateinamerika für digitale Hochtechnologie-Transformation zu werden, bei der Software, künstliche Intelligenz und Geschäft zusammenkommen, um echten Wandel zu schaffen.',
+    services_section: {
+      title: 'Dienstleistungen',
+      description1:
+        'WasakaBe bietet hochmoderne digitale Lösungen, die intelligente Automatisierung, moderne Softwaretechnik und strategisches Denken kombinieren.',
+      description2:
+        'Jeder Service ist darauf ausgelegt, Unternehmen, Bildungseinrichtungen und Regierungsstellen dabei zu helfen, ihre Abläufe zu optimieren, Benutzererfahrungen zu verbessern und durch intelligente Technologie zu skalieren.',
+      items: {
+        ai: 'Automatisierung mit KI',
+        mobile: 'Mobile Anwendungen',
+        web: 'Webplattformen',
+        cloud: 'Intelligente Integrationen',
+        strategy: 'Digitale Strategie',
+      },
+    },
+    experiences_section: {
+      title: 'Weg',
+      subtitle:
+        'Zusammenfassung der wichtigsten Erfahrungen in Softwareentwicklung und -management. Vertrauliche Informationen bleiben aus Gründen der Vertraulichkeit vorbehalten.',
+      details: 'Details anzeigen',
+      noWebsite: 'Website nicht verfügbar',
+      items: [
+        {
+          company: 'XTI - Like Capital',
+          role: 'Mobile Entwickler',
+          period: 'Jan 2025 – Apr 2025',
+          description: [
+            'Exklusive App für Mitglieder politischer Parteien.',
+            'Internes Social-Network-Modul und „Bürgerbericht“.',
+            'Nachrichtensystem, Dienstleistungen und exklusive Angebote.',
+          ],
+          highlight: 'Förderung der Teilnahme und Bindung der Nutzer.',
+          location: 'Nuevo León, Mexiko',
+          website: 'https://likephone.mx',
+        },
+        {
+          company: 'EDUCONTROL – Centro Bachillerato Tecnológico Agropecuario No.5',
+          role: 'Softwareentwickler',
+          period: 'Sep 2023 – Dez 2024',
+          description: [
+            'Institutionelle Webplattform und automatisierte Ausweise.',
+            'App für Eltern mit Alexa-Integration.',
+            'Optimierung der Zugangskontrolle und schulischen Kommunikation.',
+          ],
+          highlight: 'Automatisierung des Betriebs und bessere Kommunikation mit den Eltern.',
+          location: 'Hidalgo, Mexiko',
+          website: null,
+        },
+        {
+          company: 'Regierung von Hidalgo – IFRESH',
+          role: 'Softwareentwickler',
+          period: 'Feb 2024 – Apr 2024',
+          description: [
+            'Migration und Optimierung staatlicher Daten.',
+            'Bessere Konsistenz von Informationen und Ladeprozessen.',
+            'Werkzeuge zur Fehlererkennung/-korrektur.',
+          ],
+          highlight: 'Zuverlässigere Daten und schnellere Prozesse.',
+          location: 'Hidalgo, Mexiko',
+          website: 'https://hidalgo.gob.mx',
+        },
+        {
+          company: 'The Cooking Meat - Universidad Tecnológica de la Huasteca Hidalguense',
+          role: 'Softwareentwickler',
+          period: 'Feb 2024 – Apr 2024',
+          description: [
+            'Exklusive App für den Fleischbereich.',
+            'Erkennung verschiedener Fleischgarstufen mit CNN.',
+            'Werkzeuge zur Wahrscheinlichkeits-Erkennung/Korrektur.',
+          ],
+          highlight: 'Zuverlässigere Daten und schnellere Prozesse.',
+          location: 'Huejutla, Hidalgo, Mexiko',
+          website: 'https://uthh.edu.mx',
+        },
+      ],
+    },
+
+    footer: {
+      location_title: 'Standort',
+      location_text: 'Monterrey, Nuevo León, Mexiko.',
+      notices_title: 'Hinweise',
+      notices_confidentiality: 'Vertraulichkeitshinweis',
+      notices_terms: 'Allgemeine Geschäftsbedingungen',
+      socials_title: 'Soziale Netzwerke',
+      socials_lead: 'Folge mir und bleib in Kontakt über',
+      desc: 'Folge mir für Einblicke in <1>Entwicklung</1>, <1>KI</1>, Automatisierung und digitale Strategie.',
+      note: 'Bleiben wir in Verbindung — werde Teil der WasakaBe-Welt.',
+      copyright: 'Alle Rechte vorbehalten.',
+    },
   },
 }
 

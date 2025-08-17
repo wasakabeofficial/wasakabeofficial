@@ -32,15 +32,15 @@ const Navbar = () => {
             <a href="#services">{t('services')}</a>
           </li>
           <li>
-            <a href="#experience">{t('experience')}</a>
-          </li>
-          <li>
-            <a href="#contact">{t('contact')}</a>
+            <a href="#path">{t('experience')}</a>
           </li>
         </ul>
 
         <div className="navbar-right">
-          <LanguageIcon className="size-10 text-blue-500" onClick={toggleLanguageMenu} />
+          <LanguageIcon
+            className="size-10 cursor-pointer text-blue-500"
+            onClick={toggleLanguageMenu}
+          />
           {showLangMenu && (
             <ul className="language-dropdown">
               <li onClick={() => changeLanguage('en')}>English</li>

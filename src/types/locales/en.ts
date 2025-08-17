@@ -2,7 +2,7 @@ const en = {
   translation: {
     about: 'About Me',
     services: 'Services',
-    experience: 'Experience',
+    experience: 'Path',
     contact: 'Contact',
 
     header_title:
@@ -26,6 +26,94 @@ const en = {
     about_vision_title: 'Vision',
     about_vision_text:
       'To become a leading reference in Latin America for high-tech digital transformation, where software, artificial intelligence, and business converge to generate real change.',
+    services_section: {
+      title: 'Services',
+      description1:
+        'WasakaBe delivers cutting-edge digital solutions that combine intelligent automation, modern software engineering, and strategic thinking.',
+      description2:
+        'Each service is designed to help businesses, educational institutions, and government entities optimize their operations, improve user experiences, and scale through smart technology.',
+      items: {
+        ai: 'Automation with AI',
+        mobile: 'Mobile Applications',
+        web: 'Web Platforms',
+        cloud: 'Smart Integrations',
+        strategy: 'Digital Strategy',
+      },
+    },
+    experiences_section: {
+      title: 'Path',
+      subtitle:
+        'Summary of key experiences in software development and management. Sensitive information remains reserved for confidentiality reasons.',
+      details: 'View details',
+      noWebsite: 'Website not available',
+      items: [
+        {
+          company: 'XTI - Like Capital',
+          role: 'Mobile Developer',
+          period: 'Jan 2025 – Apr 2025',
+          description: [
+            'Exclusive app for political party members.',
+            'Internal social-network-like module and “Citizen Report”.',
+            'News system, services, and exclusive promotions.',
+          ],
+          highlight: 'Boosted participation and user retention.',
+          location: 'Nuevo León, Mexico',
+          website: 'https://likephone.mx',
+        },
+        {
+          company: 'EDUCONTROL – Centro Bachillerato Tecnológico Agropecuario No.5',
+          role: 'Software Engineer',
+          period: 'Sep 2023 – Dec 2024',
+          description: [
+            'Institutional web platform and automated credentials.',
+            'App for parents with Alexa integration.',
+            'Optimization of access control and school communication.',
+          ],
+          highlight: 'Operational automation and better communication with parents.',
+          location: 'Hidalgo, Mexico',
+          website: null,
+        },
+        {
+          company: 'Gobierno de Hidalgo – IFRESH',
+          role: 'Software Engineer',
+          period: 'Feb 2024 – Apr 2024',
+          description: [
+            'Migration and optimization of state data.',
+            'Improved information consistency and loading processes.',
+            'Tools for error detection/correction.',
+          ],
+          highlight: 'More reliable data and faster processes.',
+          location: 'Hidalgo, Mexico',
+          website: 'https://hidalgo.gob.mx',
+        },
+        {
+          company: 'The Cooking Meat - Universidad Tecnológica de la Huasteca Hidalguense',
+          role: 'Software Engineer',
+          period: 'Feb 2024 – Apr 2024',
+          description: [
+            'Exclusive app for the meat area.',
+            'Detection of different meat cooking types using CNN.',
+            'Tools for probability detection/correction.',
+          ],
+          highlight: 'More reliable data and faster processes.',
+          location: 'Huejutla, Hidalgo, Mexico',
+          website: 'https://uthh.edu.mx',
+        },
+      ],
+    },
+
+    footer: {
+      location_title: 'Location',
+      location_text: 'Monterrey, Nuevo León, Mexico.',
+      notices_title: 'Notices',
+      notices_confidentiality: 'Confidentiality Notice',
+      notices_terms: 'Terms and Conditions',
+      socials_title: 'Social Media',
+      socials_lead: 'Follow me and stay connected through',
+      desc: 'Follow me for insights on <1>development</1>, <1>AI</1>, automation, and digital strategy.',
+      note: 'Let’s stay connected — be part of the WasakaBe world.',
+      copyright: 'All rights reserved.',
+    },
   },
 }
 

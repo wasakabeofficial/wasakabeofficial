@@ -1,69 +1,71 @@
-# React + TypeScript + Vite
+# 🌐 WasakaBe – Marca Personal & Portafolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bienvenido a **WasakaBe**, un proyecto que representa mi marca personal como **Ingeniero en Desarrollo y Gestión de Software especializado en Inteligencia Artificial**.  
+Este repositorio contiene el código fuente de mi sitio web, donde muestro mi experiencia, servicios y visión tecnológica.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Visión del Proyecto
 
-## Expanding the ESLint configuration
+WasakaBe nace con la idea de **convertir ideas en soluciones inteligentes**, integrando:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Desarrollo de software escalable
+- Automatización con Inteligencia Artificial
+- Estrategias digitales y consultoría tecnológica
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Actualmente es una **marca personal** que busca crecer hasta consolidarse como una **empresa de tecnología** con enfoque en **IA, automatización y soluciones digitales**.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠️ Tecnologías Utilizadas
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Frontend**: React + TypeScript + Vite
+- **Estilos**: TailwindCSS + CSS modular
+- **Internacionalización (i18n)**: react-i18next
+- **Gestión de estado**: Zustand / Pinia (dependiendo del módulo)
+- **Backend (integraciones)**: FastAPI + PostgreSQL + Redis
+- **Infraestructura**: Docker
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ✨ Características
+
+✅ Portafolio web enfocado en marca personal  
+✅ Diseño limpio y responsive con TailwindCSS  
+✅ Soporte **multi-idioma** (ES / EN / ZH) con i18n  
+✅ Sección de **experiencias profesionales** con logos, descripciones y links  
+✅ Módulo de **servicios** (IA, desarrollo móvil, web, nube, estrategia digital)  
+✅ Footer minimalista con accesos a redes y contacto  
+✅ Preparado para escalar a más colaboradores en el futuro
+
+---
+
+---
+
+## 🌍 Demo
+
+👉 [Visitar sitio web](https://wasakabe.com) _(enlaza cuando lo publiques)_
+
+---
+
+## 🤝 Contribuciones
+
+Actualmente este es un proyecto personal, pero a futuro estará abierto a colaboradores que quieran aportar a **soluciones de IA, automatización y desarrollo web**.
+
+---
+
+## 📬 Contacto
+
+- 🌐 Sitio web: [wasakabe.com](https://wasakabe.com)
+- 📧 Email: **alanmartinez.dev@gmail.com**
+- 💼 LinkedIn: [Alan Martínez](https://linkedin.com/in/alanmartinez)
+- 🎥 YouTube / 📱 TikTok / 📸 Instagram: **@wasakabe**
+
+---
+
+## ⚡ Futuro del Proyecto
+
+- [ ] Implementar **blog técnico** con artículos de IA y desarrollo
+- [ ] Integración de proyectos reales como casos de estudio
+- [ ] Módulo de contacto con API backend
+- [ ] Escalar a un equipo de trabajo colaborativo
