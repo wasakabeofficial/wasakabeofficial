@@ -56,9 +56,9 @@ Actualmente este es un proyecto personal, pero a futuro estará abierto a colabo
 
 ## 📬 Contacto
 
-- 🌐 Sitio web: [wasakabe.com](https://wasakabe.com)
-- 📧 Email: **alanmartinez.dev@gmail.com**
-- 💼 LinkedIn: [Alan Martínez](https://linkedin.com/in/alanmartinez)
+- 🌐 Sitio web: [wasakabe.com](https://wasakabe.vercel.app/)
+- 📧 Email: **wasakabeofficial@gmail.com**
+- 💼 LinkedIn: [Alan De Jesus Martinez Hernandez "WasakaBe" ](https://www.linkedin.com/in/alandejesusmtz/)
 - 🎥 YouTube / 📱 TikTok / 📸 Instagram: **@wasakabe**
 
 ---
