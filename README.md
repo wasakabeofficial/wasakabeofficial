@@ -30,16 +30,6 @@ Me dedico a crear **soluciones digitales inteligentes** que combinan **desarroll
 
 ---
 
-## 🛠️ Tecnologías Principales
-
-- **Frontend**: React + TypeScript + Vite  
-- **Estilos**: TailwindCSS + CSS modular  
-- **Internacionalización (i18n)**: react-i18next  
-- **Gestión de estado**: Zustand / Pinia  
-- **Backend**: FastAPI + PostgreSQL + Redis  
-- **Infraestructura**: Docker  
-
----
 
 ## ✨ Características del Proyecto
 
