@@ -1,71 +1,78 @@
 # 🌐 WasakaBe – Marca Personal & Portafolio
 
-Bienvenido a **WasakaBe**, un proyecto que representa mi marca personal como **Ingeniero en Desarrollo y Gestión de Software especializado en Inteligencia Artificial**.  
-Este repositorio contiene el código fuente de mi sitio web, donde muestro mi experiencia, servicios y visión tecnológica.
+Bienvenido a **WasakaBe**, el proyecto que representa mi marca personal como **Ingeniero en Desarrollo y Gestión de Software especializado en Inteligencia Artificial**.  
+Aquí muestro quién soy, qué ofrezco y hacia dónde quiero llevar mi visión tecnológica.
 
 ---
 
-## 🚀 Visión del Proyecto
+## 👨‍💻 ¿Quién soy?
 
-WasakaBe nace con la idea de **convertir ideas en soluciones inteligentes**, integrando:
-
-- Desarrollo de software escalable
-- Automatización con Inteligencia Artificial
-- Estrategias digitales y consultoría tecnológica
-
-Actualmente es una **marca personal** que busca crecer hasta consolidarse como una **empresa de tecnología** con enfoque en **IA, automatización y soluciones digitales**.
+Soy **Alan de Jesús Martínez Hernández**, un desarrollador mexicano apasionado por la **tecnología, la innovación y la Inteligencia Artificial**.  
+Me dedico a crear **soluciones digitales inteligentes** que combinan **desarrollo de software escalable, automatización con IA y consultoría tecnológica**.
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## 🎯 Qué ofrezco
 
-- **Frontend**: React + TypeScript + Vite
-- **Estilos**: TailwindCSS + CSS modular
-- **Internacionalización (i18n)**: react-i18next
-- **Gestión de estado**: Zustand / Pinia (dependiendo del módulo)
-- **Backend (integraciones)**: FastAPI + PostgreSQL + Redis
-- **Infraestructura**: Docker
+- Desarrollo **Frontend y Backend** para web, móvil y escritorio  
+- **Automatización con Inteligencia Artificial** y Machine Learning  
+- Diseño de **arquitecturas escalables y seguras**  
+- **Integraciones en la nube** y optimización de procesos digitales  
+- Estrategia tecnológica y consultoría para empresas y proyectos
+
+---
+
+## 🚀 Visión y Misión
+
+**Misión:** Transformar ideas en soluciones de alto impacto, integrando software, inteligencia artificial y estrategia digital.  
+
+**Visión:** Convertir a **WasakaBe** en una empresa tecnológica consolidada, con un equipo especializado en **IA, automatización y soluciones digitales**, capaz de liderar proyectos globales.
 
 ---
 
-## ✨ Características
+## 🛠️ Tecnologías Principales
 
-✅ Portafolio web enfocado en marca personal  
-✅ Diseño limpio y responsive con TailwindCSS  
-✅ Soporte **multi-idioma** (ES / EN / ZH) con i18n  
-✅ Sección de **experiencias profesionales** con logos, descripciones y links  
-✅ Módulo de **servicios** (IA, desarrollo móvil, web, nube, estrategia digital)  
-✅ Footer minimalista con accesos a redes y contacto  
-✅ Preparado para escalar a más colaboradores en el futuro
+- **Frontend**: React + TypeScript + Vite  
+- **Estilos**: TailwindCSS + CSS modular  
+- **Internacionalización (i18n)**: react-i18next  
+- **Gestión de estado**: Zustand / Pinia  
+- **Backend**: FastAPI + PostgreSQL + Redis  
+- **Infraestructura**: Docker  
 
 ---
+
+## ✨ Características del Proyecto
+
+✅ Portafolio web como **marca personal profesional**  
+✅ Diseño moderno, limpio y responsive  
+✅ Soporte **multi-idioma** (ES / EN / ZH)  
+✅ Sección de experiencias profesionales y proyectos reales  
+✅ Módulo de servicios (IA, desarrollo web, móvil, nube, estrategia digital)  
+✅ Preparado para escalar con colaboradores  
 
 ---
 
 ## 🌍 Demo
 
-👉 [Visitar sitio web](https://wasakabe.vercel.app/) _(enlaza cuando lo publiques)_
-
----
-
-## 🤝 Contribuciones
-
-Actualmente este es un proyecto personal, pero a futuro estará abierto a colaboradores que quieran aportar a **soluciones de IA, automatización y desarrollo web**.
+👉 [Visitar sitio web](https://wasakabe.vercel.app/) _(enlace activo al publicarlo)_
 
 ---
 
 ## 📬 Contacto
 
-- 🌐 Sitio web: [wasakabe.com](https://wasakabe.vercel.app/)
-- 📧 Email: **wasakabeofficial@gmail.com**
-- 💼 LinkedIn: [Alan De Jesus Martinez Hernandez "WasakaBe" ](https://www.linkedin.com/in/alandejesusmtz/)
+- 🌐 Sitio web: [wasakabe.com](https://wasakabe.vercel.app/)  
+- 📧 Email: **wasakabeofficial@gmail.com**  
+- 💼 LinkedIn: [Alan De Jesus Martínez Hernández "WasakaBe"](https://www.linkedin.com/in/alandejesusmtz/)  
 - 🎥 YouTube / 📱 TikTok / 📸 Instagram: **@wasakabe**
 
 ---
 
 ## ⚡ Futuro del Proyecto
 
-- [ ] Implementar **blog técnico** con artículos de IA y desarrollo
-- [ ] Integración de proyectos reales como casos de estudio
-- [ ] Módulo de contacto con API backend
-- [ ] Escalar a un equipo de trabajo colaborativo
+- [ ] Blog técnico con artículos de IA y desarrollo  
+- [ ] Integración de proyectos reales como casos de estudio  
+- [ ] API de contacto y CRM propio  
+- [ ] Crecimiento hacia un **equipo colaborativo**  
+- [ ] Escalar la marca a una **empresa tecnológica global**  
+
+---
