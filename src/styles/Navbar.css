@@ -1,4 +1,3 @@
-/* Layout base */
 .navbar {
   position: sticky;
   top: 0;
@@ -24,7 +23,6 @@
   align-items: center;
 }
 
-/* Logo & iconos */
 .navbar-logo {
   height: 55px;
   width: auto;
@@ -49,7 +47,6 @@
   background: #1c1c2b;
 }
 
-/* Links desktop */
 .navbar-links {
   list-style: none;
   display: flex;
@@ -70,7 +67,6 @@
   color: #9aa0ff;
 }
 
-/* Dropdown idiomas (desktop) */
 .language-dropdown {
   position: absolute;
   top: 64px;
@@ -102,16 +98,15 @@
   color: #63d1ff;
 }
 
-/* --------- Menú móvil / tablet --------- */
 .hamburger {
-  display: none; /* visible en breakpoints pequeños */
+  display: none;
 }
 
 .mobile-menu {
   position: fixed;
   left: 0;
   right: 0;
-  top: 64px; /* justo debajo del navbar */
+  top: 64px;
   background: rgba(13, 13, 22, 0.96);
   backdrop-filter: blur(6px);
   border-top: 1px solid #222236;
@@ -154,7 +149,6 @@
   color: #9aa0ff;
 }
 
-/* Lenguajes dentro del drawer móvil */
 .mobile-langs {
   border-top: 1px solid #222236;
   padding: 0.9rem 1.2rem 1.2rem;
@@ -187,9 +181,7 @@
   background: #24243a;
 }
 
-/* --------- Breakpoints --------- */
 @media (max-width: 1024px) {
-  /* Oculta links de escritorio, muestra hamburguesa */
   .navbar-center {
     display: none;
   }
@@ -198,7 +190,6 @@
     display: inline-flex;
   }
 
-  /* Ajustes de tamaños para mejor toque */
   .navbar {
     padding: 0.9rem 1rem;
   }
@@ -213,7 +204,6 @@
   }
 }
 
-/* Un poco más compacto en teléfonos */
 @media (max-width: 640px) {
   .mobile-langs__grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));

@@ -29,7 +29,6 @@ const Navbar = () => {
         </a>
       </div>
 
-      {/* Desktop center links */}
       <div className="navbar-center">
         <ul className="navbar-links">
           <li>
@@ -57,7 +56,6 @@ const Navbar = () => {
           <LanguageIcon className="navbar-icon" />
         </button>
 
-        {/* Botón hamburguesa, visible en móviles/tablets */}
         <button
           className="icon-btn hamburger"
           aria-label="Open menu"
@@ -85,7 +83,6 @@ const Navbar = () => {
         )}
       </div>
 
-      {/* Menú móvil desplegable */}
       <div id="mobile-menu" className={`mobile-menu ${isMenuOpen ? 'open' : ''}`} role="menu">
         <ul className="mobile-links">
           <li>
@@ -105,7 +102,6 @@ const Navbar = () => {
           </li>
         </ul>
 
-        {/* Lenguajes también accesibles en móvil */}
         <div className="mobile-langs">
           <p className="mobile-langs__title">{t('language') ?? 'Language'}</p>
           <div className="mobile-langs__grid">

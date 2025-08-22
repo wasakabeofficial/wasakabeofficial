@@ -1,33 +1,20 @@
-/* ====== Variables y reset suave ====== */
-:root {
-  --exp-bg: #0b0f1a;
-  --card-bg: rgba(255, 255, 255, 0.06);
-  --card-bg-hover: rgba(255, 255, 255, 0.1);
-  --border: rgba(255, 255, 255, 0.12);
-  --text: #e8ecf1;
-  --muted: #a8b1c1;
-  --accent: #7c5cff;
-  --accent-2: #00d1ff;
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-}
-
 .exp {
   padding: clamp(20px, 4vw, 56px);
   color: var(--text);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: clamp(12px, 2vw, 24px);
+  min-height: 100vh;
 }
 
-/* ====== Header ====== */
 .exp__header {
   text-align: center;
   margin-bottom: clamp(12px, 2vw, 28px);
 }
 
 .exp__title {
-  /* clamp: min, preferred, max  (¡orden correcto!) */
   font-size: clamp(5.5rem, 4.5vw, 2.2rem);
   font-weight: 800;
   letter-spacing: 0.3px;
@@ -42,7 +29,6 @@
   max-width: 980px;
 }
 
-/* ====== Timeline ====== */
 .exp__timeline {
   position: relative;
   width: 100%;
@@ -61,7 +47,6 @@
   margin-bottom: 22px;
 }
 
-/* Línea vertical */
 .exp__line {
   position: absolute;
   left: 19px;
@@ -72,7 +57,6 @@
   z-index: 0;
 }
 
-/* Nodo */
 .exp__node {
   position: relative;
   z-index: 1;
@@ -96,8 +80,6 @@
   letter-spacing: 0.5px;
   font-size: 0.75rem;
 }
-
-/* ====== Card ====== */
 .exp__card {
   background: var(--card-bg);
   border: 1px solid var(--border);
@@ -109,8 +91,6 @@
     transform 0.25s ease,
     background 0.25s ease,
     border-color 0.25s ease;
-
-  /* Layout flexible y robusto */
   display: flex;
   align-items: stretch;
   gap: clamp(12px, 2vw, 20px);
@@ -123,12 +103,11 @@
   border-color: rgba(124, 92, 255, 0.35);
 }
 
-/* Aside (periodo + logo) */
 .exp__meta {
   display: grid;
   gap: 10px;
   align-content: start;
-  min-width: 180px; /* evita “bailes” en desktop */
+  min-width: 180px;
 }
 
 .exp__period {
@@ -150,11 +129,10 @@
 }
 
 .exp__logo {
-  /* sin comillas; valores válidos */
   width: 100%;
   height: auto;
   max-height: 110px;
-  object-fit: contain; /* no deformar */
+  object-fit: contain;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
   transition: transform 0.25s ease;
 }
@@ -163,7 +141,6 @@
   transform: scale(1.05);
 }
 
-/* Contenido principal */
 .exp__cardHeader {
   margin-bottom: 6px;
   flex: 1 1 auto;
@@ -180,7 +157,6 @@
   color: var(--muted);
   margin-top: 4px;
   font-size: clamp(1rem, 2.8vw, 1.1rem);
-  /* quitar ancho fijo que rompía layout */
   width: auto;
   max-width: 100%;
 }
@@ -192,9 +168,9 @@
 }
 
 .exp__website {
-  font-size: clamp(1rem, 3.5vw, 1.6rem); /* más razonable que 2.5rem */
+  font-size: clamp(1rem, 3.5vw, 1.6rem);
   margin-top: 2px;
-  overflow-wrap: anywhere; /* no desborda en XS */
+  overflow-wrap: anywhere;
 }
 .exp__website a {
   color: var(--accent-2);
@@ -215,7 +191,6 @@
   line-height: 1.45;
 }
 
-/* Details */
 .exp__details {
   margin-top: 10px;
 }
@@ -256,16 +231,12 @@
   line-height: 1.5;
 }
 
-/* ====== Breakpoints ====== */
-
-/* <= 1200px */
 @media (max-width: 1200px) {
   .exp__timeline {
     max-width: 900px;
   }
 }
 
-/* <= 992px */
 @media (max-width: 992px) {
   .exp__item {
     grid-template-columns: 32px minmax(0, 1fr);
@@ -289,7 +260,6 @@
   }
 }
 
-/* <= 768px: card en columna */
 @media (max-width: 768px) {
   .exp__card {
     flex-direction: column;
@@ -311,8 +281,6 @@
     max-width: 60vw;
   }
 }
-
-/* <= 600px: timeline compacto */
 @media (max-width: 600px) {
   .exp__item {
     grid-template-columns: 28px 1fr;
@@ -323,7 +291,6 @@
   }
 }
 
-/* <= 480px: modo móvil estricto */
 @media (max-width: 480px) {
   .exp__line {
     display: none;
@@ -372,7 +339,6 @@
   }
 }
 
-/* <= 360px: asegurar legibilidad */
 @media (max-width: 360px) {
   .exp__title {
     font-size: 1.35rem;

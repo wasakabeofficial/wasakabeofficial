@@ -6,6 +6,24 @@
   font-family: 'Oswald', sans-serif;
   font-optical-sizing: auto;
 }
+:root {
+  --exp-bg: #0b0f1a;
+  --card-bg: rgba(255, 255, 255, 0.06);
+  --card-bg-hover: rgba(255, 255, 255, 0.1);
+  --border: rgba(255, 255, 255, 0.12);
+  --text: #e8ecf1;
+  --muted: #a8b1c1;
+  --accent: #7c5cff;
+  --accent-2: #00d1ff;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --wk-bg-top: #0b1220;
+  --wk-bg-bottom: #172234;
+  --wk-text: #e6edf6;
+  --wk-text-dim: #c7d2e0;
+  --wk-border: #5b6b80;
+  --wk-accent: #e2e8f0;
+}
+
 body {
-  background: linear-gradient(to right, #1e3c4c, #0d1117);
+  background: linear-gradient(to right, rgb(30, 60, 76), rgb(13, 17, 23));
 }

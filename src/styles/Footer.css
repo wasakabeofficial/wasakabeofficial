@@ -1,13 +1,3 @@
-/* ------- Variables y base ------- */
-:root {
-  --wk-bg-top: #0b1220; /* slate-900 aprox */
-  --wk-bg-bottom: #172234; /* slate-800 aprox */
-  --wk-text: #e6edf6; /* texto principal */
-  --wk-text-dim: #c7d2e0; /* texto secundario */
-  --wk-border: #5b6b80; /* líneas/contornos */
-  --wk-accent: #e2e8f0; /* subrayado claro */
-}
-
 .wk-footer {
   width: 100%;
   color: var(--wk-text);
@@ -27,9 +17,6 @@
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
-
-/* ------- Columnas ------- */
-
 .wk-footer__col--right {
   text-align: left;
 }
@@ -40,17 +27,16 @@
   }
 }
 
-/* ------- Títulos y subrayado ------- */
 .wk-footer__title {
-  font-size: 1.5rem; /* text-2xl */
+  font-size: 1.5rem;
   line-height: 1.3;
-  font-weight: 800; /* bold fuerte */
+  font-weight: 800;
   letter-spacing: 0.2px;
 }
 
 .wk-footer__underline {
   margin-top: 0.5rem;
-  width: 10rem; /* ~w-40 */
+  width: 10rem;
   height: 2px;
   background: var(--wk-accent);
   border-radius: 2px;
@@ -60,11 +46,10 @@
   margin-left: auto;
 }
 
-/* ------- Texto y listas ------- */
 .wk-footer__address {
   margin-top: 1.25rem;
   font-style: normal;
-  font-size: 1.125rem; /* text-lg */
+  font-size: 1.125rem;
   line-height: 1.7;
   color: var(--wk-text-dim);
 }
@@ -74,7 +59,7 @@
   padding-left: 1rem;
   list-style: disc;
   color: var(--wk-text-dim);
-  font-size: 1.125rem; /* text-lg */
+  font-size: 1.125rem;
 }
 
 .wk-link {
@@ -90,7 +75,6 @@
   text-underline-offset: 4px;
 }
 
-/* ------- Social ------- */
 .wk-footer__lead {
   margin-top: 1.25rem;
   font-size: 1.125rem;
@@ -110,13 +94,13 @@
 }
 
 .wk-social__btn {
-  width: 48px; /* h-12 */
+  width: 48px;
   height: 48px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 14px; /* rounded-xl */
-  background: rgba(71, 85, 105, 0.7); /* slate-700/70 */
+  border-radius: 14px;
+  background: rgba(71, 85, 105, 0.7);
   backdrop-filter: saturate(120%) blur(2px);
   transition:
     transform 0.15s ease,
@@ -128,17 +112,16 @@
 }
 
 .wk-social__svg {
-  width: 28px; /* w-7 */
+  width: 28px;
   height: 28px;
   fill: currentColor;
   color: var(--wk-text);
 }
 
-/* ------- Descripciones ------- */
 .wk-footer__desc {
   margin-top: 1.25rem;
   color: var(--wk-text-dim);
-  font-size: 1rem; /* text-base */
+  font-size: 1rem;
   line-height: 1.7;
 }
 .wk-footer__note {
@@ -157,38 +140,32 @@
   fill: currentColor;
 }
 
-/* ------- Bottom ------- */
 .wk-footer__bottom {
   background: linear-gradient(180deg, var(--wk-bg-top), var(--wk-bg-bottom));
   border-top: 1px solid rgba(91, 107, 128, 0.6);
   padding: 18px 24px;
   text-align: center;
-  color: #cbd5e1; /* slate-300 aprox */
-  font-size: 0.95rem; /* md:text-base */
+  color: #cbd5e1;
+  font-size: 0.95rem;
 }
 
 .wk-strong {
   font-weight: 600;
 }
 
-/* ====== RESPONSIVO (overrides) ====== */
-
-/* Contenedor: grid fluido con auto-fit */
 .wk-footer__inner {
   padding: clamp(20px, 3.5vw, 40px) clamp(12px, 3vw, 28px);
   display: grid;
   gap: clamp(20px, 3vw, 48px);
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* 1–4 cols según ancho */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
-/* En tablets anchas y desktop puedes forzar 3–4 columnas si prefieres */
 @media (min-width: 1024px) {
   .wk-footer__inner {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
-/* Alineaciones por breakpoint */
 .wk-footer__col--right {
   text-align: left;
 }
@@ -198,7 +175,6 @@
   }
 }
 
-/* Títulos y tipografías fluidas */
 .wk-footer__title {
   font-size: clamp(1.1rem, 1.8vw, 1.5rem);
 }
@@ -211,7 +187,6 @@
   line-height: 1.7;
 }
 
-/* Subrayado: centrado en móvil, a la derecha en desktop (si aplica) */
 .wk-footer__underline {
   width: clamp(6rem, 20vw, 10rem);
 }
@@ -224,7 +199,6 @@
   }
 }
 
-/* Social: que no se rompa y se centre en móvil */
 .wk-social {
   flex-wrap: wrap;
   justify-content: center;
@@ -245,7 +219,6 @@
   height: clamp(22px, 3vw, 28px);
 }
 
-/* Lista de avisos: sin bleed y con touch targets cómodos */
 .wk-footer__list {
   margin-top: 1rem;
   padding-left: 1.25rem;
@@ -254,7 +227,7 @@
   margin-top: 0.35rem;
 }
 .wk-link {
-  padding: 2px 0; /* mejor área de click */
+  padding: 2px 0;
 }
 .wk-link:focus-visible,
 .wk-social__btn:focus-visible {
@@ -263,7 +236,6 @@
   border-radius: 14px;
 }
 
-/* Columna final (desc + nota): que pueda ocupar ancho completo en móvil */
 @media (max-width: 480px) {
   .wk-footer__desc,
   .wk-footer__note {
@@ -271,14 +243,12 @@
   }
 }
 
-/* Barra inferior: padding y tamaño fluido */
 .wk-footer__bottom {
   padding: clamp(12px, 2.5vw, 18px) clamp(16px, 4vw, 24px);
   font-size: clamp(0.9rem, 1.6vw, 1rem);
   text-align: center;
 }
 
-/* Respeto a usuarios con menos motion */
 @media (prefers-reduced-motion: reduce) {
   .wk-link,
   .wk-social__btn {

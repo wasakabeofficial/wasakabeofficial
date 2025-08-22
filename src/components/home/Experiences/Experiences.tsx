@@ -25,33 +25,30 @@ const initialsOf = (name: string) =>
     .split(/\s+/)
     .filter(Boolean)
     .slice(0, 3)
-    .map((p) => p[0]!.toUpperCase())
+    .map((paragraph) => paragraph[0]!.toUpperCase())
     .join('')
 
 export default function Experiences() {
   const { t } = useTranslation()
-
-  // Lee el array completo desde i18n
   const itemsUnknown = t('experiences_section.items', {
     returnObjects: true,
     defaultValue: [],
   }) as unknown
 
-  // Asegura que sea un array y normaliza campos
   const EXPERIENCES: Experience[] = Array.isArray(itemsUnknown)
-    ? (itemsUnknown as unknown[]).map((it) => {
-        const obj = typeof it === 'object' && it !== null ? (it as Record<string, unknown>) : {}
-        const company = String(obj.company ?? '')
+    ? (itemsUnknown as unknown[]).map((item) => {
+        const object =
+          typeof item === 'object' && item !== null ? (item as Record<string, unknown>) : {}
+        const company = String(object.company ?? '')
         return {
           company,
-          role: String(obj.role ?? ''),
-          period: String(obj.period ?? ''),
-          description: Array.isArray(obj.description) ? obj.description.map(String) : [],
-          highlight: obj.highlight ? String(obj.highlight) : undefined,
-          location: obj.location ? String(obj.location) : undefined,
-          website: obj.website === null ? null : obj.website ? String(obj.website) : null,
-          // logo opcional en i18n; si no está, lo resolvemos por nombre
-          logo: obj.logo ?? logoByCompany[company],
+          role: String(object.role ?? ''),
+          period: String(object.period ?? ''),
+          description: Array.isArray(object.description) ? object.description.map(String) : [],
+          highlight: object.highlight ? String(object.highlight) : undefined,
+          location: object.location ? String(object.location) : undefined,
+          website: object.website === null ? null : object.website ? String(object.website) : null,
+          logo: object.logo ?? logoByCompany[company],
         } as Experience
       })
     : []
@@ -71,43 +68,47 @@ export default function Experiences() {
       </header>
 
       <ol className="exp__timeline" role="list">
-        {EXPERIENCES.map((exp, i) => (
-          <li key={`${exp.company}-${exp.period}-${i}`} className="exp__item">
+        {EXPERIENCES.map((experencies, index) => (
+          <li key={`${experencies.company}-${experencies.period}-${index}`} className="exp__item">
             <span className="exp__line" aria-hidden="true" />
             <span className="exp__node" aria-hidden="true">
-              <span className="exp__badge">{initialsOf(exp.company)}</span>
+              <span className="exp__badge">{initialsOf(experencies.company)}</span>
             </span>
 
-            <article className="exp__card" aria-labelledby={`exp-title-${i}`}>
+            <article className="exp__card" aria-labelledby={`exp-title-${index}`}>
               <aside className="exp__meta">
-                <span className="exp__period">{exp.period}</span>
-                {exp.logo ? (
+                <span className="exp__period">{experencies.period}</span>
+                {experencies.logo ? (
                   <div className="exp__logoWrapper">
-                    <img src={exp.logo} alt={`Logo de ${exp.company}`} className="exp__logo" />
+                    <img
+                      src={experencies.logo}
+                      alt={`Logo de ${experencies.company}`}
+                      className="exp__logo"
+                    />
                   </div>
                 ) : (
-                  <div className="exp__logoFallback">{initialsOf(exp.company)}</div>
+                  <div className="exp__logoFallback">{initialsOf(experencies.company)}</div>
                 )}
               </aside>
 
               <header className="exp__cardHeader">
-                <h3 id={`exp-title-${i}`} className="exp__role">
-                  {exp.role}
+                <h3 id={`exp-title-${index}`} className="exp__role">
+                  {experencies.role}
                 </h3>
-                <p className="exp__company">{exp.company}</p>
+                <p className="exp__company">{experencies.company}</p>
 
-                {exp.location && <p className="exp__location">{exp.location}</p>}
-                {exp.website ? (
+                {experencies.location && <p className="exp__location">{experencies.location}</p>}
+                {experencies.website ? (
                   <p className="exp__website">
-                    <a href={exp.website} target="_blank" rel="noopener noreferrer">
-                      {String(exp.website).replace(/^https?:\/\//, '')}
+                    <a href={experencies.website} target="_blank" rel="noopener noreferrer">
+                      {String(experencies.website).replace(/^https?:\/\//, '')}
                     </a>
                   </p>
                 ) : (
                   <p className="exp__website exp__website--na">{noWebsite}</p>
                 )}
 
-                {exp.highlight && <p className="exp__highlight">{exp.highlight}</p>}
+                {experencies.highlight && <p className="exp__highlight">{experencies.highlight}</p>}
               </header>
 
               <details className="exp__details">
@@ -130,8 +131,8 @@ export default function Experiences() {
                   </svg>
                 </summary>
                 <ul className="exp__desc">
-                  {exp.description.map((d, idx) => (
-                    <li key={idx}>{d}</li>
+                  {experencies.description.map((date, idx) => (
+                    <li key={idx}>{date}</li>
                   ))}
                 </ul>
               </details>

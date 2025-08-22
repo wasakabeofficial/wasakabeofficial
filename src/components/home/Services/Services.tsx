@@ -1,5 +1,12 @@
 import { useTranslation } from 'react-i18next'
-import { icon_ai, icon_app, icon_digital, icon_nube, icon_web } from '../../../constants/assets'
+import {
+  braw_wallpapers,
+  icon_ai,
+  icon_app,
+  icon_digital,
+  icon_nube,
+  icon_web,
+} from '../../../constants/assets'
 import '../../../styles/Services.css'
 
 type ServiceItem = {
@@ -20,12 +27,9 @@ function ServiceCard({ id, icon, alt }: ServiceItem) {
   const { t } = useTranslation()
   return (
     <div className="card">
-      <div className="services-card-icon">
-        <img src={icon} alt={alt} loading="lazy" decoding="async" draggable={false} />
-      </div>
-      <div className="services-card-text">
-        {/* Se traduce según la clave en services_section.items */}
-        <p>{t(`services_section.items.${id}`)}</p>
+      <img src={icon} alt={alt} loading="lazy" decoding="async" draggable={false} />
+      <div className="card-caption">
+        <span>{t(`services_section.items.${id}`)}</span>
       </div>
     </div>
   )
@@ -35,7 +39,13 @@ export default function Services() {
   const { t } = useTranslation()
 
   return (
-    <div className="services-container" id="services">
+    <div
+      className="services-container"
+      id="services"
+      style={{
+        backgroundImage: `linear-gradient(rgb(30, 60, 76), rgba(13,17,23,0.55)), url(${braw_wallpapers})`,
+      }}
+    >
       <h1>{t('services_section.title')}</h1>
 
       <div className="services-texts">
