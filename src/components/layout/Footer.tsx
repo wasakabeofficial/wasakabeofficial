@@ -77,7 +77,7 @@ export default function Footer() {
             <a
               aria-label="TikTok"
               className="wk-social__btn"
-              href="https://www.tiktok.com/@wasakabe"
+              href="https://www.tiktok.com/@wasakabe_official"
               rel="noopener"
             >
               <svg viewBox="0 0 24 24" className="wk-social__svg">
