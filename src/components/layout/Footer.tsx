@@ -46,7 +46,7 @@ export default function Footer() {
           <p className="wk-footer__lead">{t('footer.socials_lead')}</p>
 
           <div className="wk-social">
-            <a aria-label="Facebook" className="wk-social__btn" href="#" rel="noopener">
+            <a aria-label="Facebook" className="wk-social__btn" href="https://www.facebook.com/WasakaBegeinTv" rel="noopener">
               <svg viewBox="0 0 24 24" className="wk-social__svg">
                 <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H7.9V12h2.6V9.8c0-2.6 1.5-4 3.8-4 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.7-1.6 1.5V12h2.8l-.5 2.9h-2.3v7A10 10 0 0 0 22 12z" />
               </svg>
